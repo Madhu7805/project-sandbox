@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader</title>
+    <style>
+        *{
+          
+            padding: 5%;
+            align-items: center;
+            background: border-box;
+            justify-content: center;
+            margin: 20px;
+            
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            background-color: rgb(26, 17, 17);
+
+        }
+        .c0{
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 130px;
+            width: 130px;
+            border-radius: 150px;
+            border: 3px solid #130f0f;
+            
+            border-left: solid rgb(8, 8, 116);
+            border-top: solid rgb(8, 8, 116);
+            animation: ani 1s linear infinite ;
+
+        }
+        .c1{
+            margin: 5px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 80px;
+            border-radius: 150px;
+            border: 3px solid rgb(29, 15, 15);
+            border-right: 3px solid red;
+            border-top: 3px solid red;
+            animation: ani slow 1s linear infinite;
+        }
+        .c2{
+            padding: 0%;
+            margin: 0%;
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid black;
+            border-top: 3px solid yellow;
+            border-right: 3px solid yellow;
+            animation: ani 2s linear;
+
+        }
+       @keyframes ani{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        
+        h1{
+            display: flex;
+            align-items: center;
+            position: relative;
+            color:#0000004d;
+            font-size: 20px;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1:before{
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            max-width: 50em;
+            white-space: nowrap;
+            color: white;
+            animation: loading 8s linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes loading {
+            0%{
+                max-width: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="c0">
+            <div class="c1">
+               <div class="c2">
+        
+            </div>
+            </div>
+        </div>
+    
+    <div class="loader">
+    <h1 data-text="Advanced loader using HTML & CSS">  </h1>
+    </div>
+    </div>
+    
+</body>
+</html>
