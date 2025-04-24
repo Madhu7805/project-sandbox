@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg, #ffffff, #a3e2f5) ;
+    background-size: contain;
+    cursor: pointer;
+
+}
+.face
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #fdff71, #fffb38);
+    border:3px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face:hover
+{
+    background: #ff8138;
+    transition: all 2s ease;
+    box-shadow: insert 0px 0px 50px #b56262, 0px 0px 60px #6f6e6e,0px 0px 100px #ffbaba;
+    border-color: #ffe605;
+}
+.face:before
+{
+    content: '';
+    position: absolute;
+    top: 190px;
+    width: 150px;
+    height: 70px;
+    background: #700000;
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    transition: all 2s ease;
+}
+.face:hover:before
+{
+   top:210px;
+   width: 150px;
+   height:20px;
+   background: #7d0000;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+   
+}
+.eyes
+{
+    position: relative;
+    top: -40px;
+    display: flex;
+}
+.eye
+{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    left:-250px;
+    bottom: 50px;
+    display: block;
+    background: radial-gradient(white,#a0eeff);
+    margin: 10 10px;
+    border-radius: 50px;
+}
+.eye:before
+{
+    content: '';
+    position: absolute;
+    top: 65px;
+    left:67px;
+    transform: translate(-50px,-50px);
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(black,#ff0000);
+    border-radius: 50px;
+    border-radius: #333;
+    transition: all 2s ease;
+}
+.face:hover .eye:before
+{
+    top:90px;
+    left:70px;
+  
+}
+
+
+
+
