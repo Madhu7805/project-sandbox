@@ -1,0 +1,97 @@
+
+/* Reset basic margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('jerry.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ec9411;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #ec9411;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* When checkbox is checked, show menu */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
+
+/* Just for demo section */
+section {
+  padding: 50px;
+  text-align: center;
+}
